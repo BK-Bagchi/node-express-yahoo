@@ -36,3 +36,6 @@ app.get("/user", (req, res)=>{
 app.get("/download", (req, res)=>{
     res.download(__dirname+"/files/eDLPaper.pdf", "eDriving_License.pdf") //user will download a file named eDriving_License.pdf
 })
+app.get("/sendFile", (req, res)=>{
+    res.sendFile(__dirname+"/files/eDLPaper.pdf") //user will get forwarded to a window where he will see the file and get option to download it
+})
