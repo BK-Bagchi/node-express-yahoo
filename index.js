@@ -61,3 +61,8 @@ app.get("/setGet", (req, res)=>{
     res.set("name", "Dipto Bagchi") //name is variable like container
     res.send("set and get done with "+ res.get("name")) // reading the variable value
 })
+
+
+app.get("/params/:parameter", (req, res)=>{
+    res.send(req.params) //gets the parameter/s and sends as response
+})
