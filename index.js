@@ -6,6 +6,8 @@ app.listen(3000, ()=>{
 })
 
 
+app.set("view engine", "ejs")// declaring ejs view engine at the very top
+
 app.get("/", (req, res)=>{ //http://localhost:3000/
     res.send("Hello, I'm sending response on 3000 port")
 })
@@ -27,4 +29,7 @@ app.get("/search", (req, res)=>{ //http://localhost:3000/search?name=dipto, http
 
 app.get("/redirect", (req, res)=>{
     res.redirect("/about") //this will redirect browser to /about directory
+})
+app.get("/user", (req, res)=>{
+    res.render("user") //goes to views folder and checks for user.ejs file. The user.ejs file contains the necessary html code
 })
