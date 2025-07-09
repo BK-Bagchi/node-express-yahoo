@@ -43,3 +43,7 @@ app.get("/end", (req, res)=>{
     res.write("This is the end response method")
     res.end() //response will end after this
 })
+app.get("/sendStatus", (req, res)=>{
+    // res.sendStatus(404)
+    res.status(404).send("404 Not found") //these are the 2 ways to send status
+})
