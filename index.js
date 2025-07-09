@@ -66,3 +66,6 @@ app.get("/setGet", (req, res)=>{
 app.get("/params/:parameter", (req, res)=>{
     res.send(req.params) //gets the parameter/s and sends as response
 })
+app.get("/query", (req, res)=>{
+    res.send(req.query) //gets the query/s and sends as response
+})
