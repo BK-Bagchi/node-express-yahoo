@@ -1,0 +1,4 @@
+initialize project with nodejs- npm init -y
+install nodemon-> npm install nodemon
+install expressjs- npm install express
+to run this project-> package.json-> "scripts": {"start": "nodemon index.js"}. now in the terminal use npm run start
