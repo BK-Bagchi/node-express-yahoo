@@ -47,3 +47,7 @@ app.get("/sendStatus", (req, res)=>{
     // res.sendStatus(404)
     res.status(404).send("404 Not found") //these are the 2 ways to send status
 })
+app.get("/headerSend", (req, res)=>{
+    res.send("response send")
+    console.log(res.headersSent) //returns true/false depending on weather response sending is done
+})
