@@ -24,3 +24,7 @@ app.get("/member/:member_name-:member_id", (req, res)=>{ //http://localhost:3000
 app.get("/search", (req, res)=>{ //http://localhost:3000/search?name=dipto, http://localhost:3000/search?name=dipto&age=28
     res.send(req.query)
 })
+
+app.get("/redirect", (req, res)=>{
+    res.redirect("/about") //this will redirect browser to /about directory
+})
