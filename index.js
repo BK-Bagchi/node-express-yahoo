@@ -51,3 +51,7 @@ app.get("/headerSend", (req, res)=>{
     res.send("response send")
     console.log(res.headersSent) //returns true/false depending on weather response sending is done
 })
+app.get("/setGet", (req, res)=>{
+    res.set("name", "Dipto Bagchi") //name is variable like container
+    res.send("set and get done with "+ res.get("name")) // reading the variable value
+})
