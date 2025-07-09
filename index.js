@@ -39,3 +39,7 @@ app.get("/download", (req, res)=>{
 app.get("/sendFile", (req, res)=>{
     res.sendFile(__dirname+"/files/eDLPaper.pdf") //user will get forwarded to a window where he will see the file and get option to download it
 })
+app.get("/end", (req, res)=>{
+    res.write("This is the end response method")
+    res.end() //response will end after this
+})
