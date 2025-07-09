@@ -9,7 +9,7 @@ app.listen(3000, ()=>{
 app.set("view engine", "ejs")// declaring ejs view engine at the very top
 
 app.get("/", (req, res)=>{ //http://localhost:3000/
-    res.send("Hello, I'm sending response on 3000 port")
+    res.send("Hello, I'm sending response on 3000 port") //
 })
 app.get("/about", (req, res)=>{
     res.send("Ask me anything about me  ") //http://localhost:3000/about
@@ -27,6 +27,10 @@ app.get("/search", (req, res)=>{ //http://localhost:3000/search?name=dipto, http
     res.send(req.query)
 })
 
+
+app.get("/send", (req, res)=>{
+    res.send("Send method") //most commonly used to send response
+})
 app.get("/redirect", (req, res)=>{
     res.redirect("/about") //this will redirect browser to /about directory
 })
