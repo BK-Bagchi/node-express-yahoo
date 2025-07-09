@@ -66,6 +66,7 @@ app.get("/setGet", (req, res)=>{
 })
 
 
+//All necessary request methods
 app.get("/params/:parameter", (req, res)=>{
     res.send(req.params) //gets the parameter/s and sends as response
 })
