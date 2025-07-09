@@ -33,3 +33,6 @@ app.get("/redirect", (req, res)=>{
 app.get("/user", (req, res)=>{
     res.render("user") //goes to views folder and checks for user.ejs file. The user.ejs file contains the necessary html code
 })
+app.get("/download", (req, res)=>{
+    res.download(__dirname+"/files/eDLPaper.pdf", "eDriving_License.pdf") //user will download a file named eDriving_License.pdf
+})
