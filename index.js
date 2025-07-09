@@ -7,6 +7,9 @@ app.listen(3000, ()=>{
 
 
 app.set("view engine", "ejs")// declaring ejs view engine at the very top
+app.use(express.json()) //allows this app to request json file anywhere under this line. declare at the very top
+app.use(express.urlencoded({extended: false})) //allows this app to get form data
+
 
 app.get("/", (req, res)=>{ //http://localhost:3000/
     res.send("Hello, I'm sending response on 3000 port") //
@@ -68,4 +71,8 @@ app.get("/params/:parameter", (req, res)=>{
 })
 app.get("/query", (req, res)=>{
     res.send(req.query) //gets the query/s and sends as response
+})
+app.post("/body", (req, res)=>{
+    res.send(req.body)
+    console.log(req.body) //used postman for this test. postman inputs some data, both in json and form format. this method accepts the data and shows in console
 })
