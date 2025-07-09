@@ -28,6 +28,8 @@ app.get("/search", (req, res)=>{ //http://localhost:3000/search?name=dipto, http
 })
 
 
+
+//All response methods
 app.get("/send", (req, res)=>{
     res.send("Send method") //most commonly used to send response
 })
